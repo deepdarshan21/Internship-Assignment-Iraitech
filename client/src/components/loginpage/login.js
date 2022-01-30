@@ -43,7 +43,7 @@ const Login = ({ setToken }) => {
                             />
                         </div>
                         <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                            <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign In</p>
                             {errorMessage && (
                                 <p className="alert alert-danger" role="alert">
                                     {errorMessage}
