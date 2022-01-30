@@ -11,6 +11,7 @@ const Homepage = ({ token, setToken }) => {
         mobile: "",
         address: "",
     });
+    const [error, setError] = useState("");
 
     useEffect(() => {
         axios
@@ -23,13 +24,13 @@ const Homepage = ({ token, setToken }) => {
                 setUserDetails(res.data.data);
             })
             .catch((err) => {
-                console.log(err);
+                setError("Can't able to fetch User Data");
             });
     }, [token]);
 
-    const logout=()=>{
-        setToken("")
-    }
+    const logout = () => {
+        setToken("");
+    };
 
     return (
         <div className="homepage">
@@ -37,6 +38,11 @@ const Homepage = ({ token, setToken }) => {
                 <u>Hello User</u>
             </h3>
             <br />
+            {error && (
+                <p className="alert alert-danger" role="alert">
+                    {error}
+                </p>
+            )}
             <div className="content">
                 <p>
                     <b>First-Name: </b>
