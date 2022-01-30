@@ -6,9 +6,7 @@ import Register from "./components/registerpage/register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-    const [token, setToken] = useState(
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZjZiNGI2N2Y5ZjQ2NTcyZDE5OGE0OSIsInVzZXJOYW1lIjoiZGVlcHMyMSIsImlhdCI6MTY0MzU2MDU0NX0.05ugLZdPPq0PXpA6aHnp_JVu450PjkdLxDNKFf2Kis4"
-    );
+    const [token, setToken] = useState("");
     return (
         <div className="App">
             <BrowserRouter>
